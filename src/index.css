@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { scroll-behavior: smooth; }
+  body {
+    @apply font-body bg-navy-dark text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #00C2E0, #4DD9F0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-glow {
+    box-shadow: 0 8px 32px rgba(0, 194, 224, 0.08);
+    border: 1px solid rgba(0, 194, 224, 0.2);
+  }
+  .card-glow:hover {
+    box-shadow: 0 16px 48px rgba(0, 194, 224, 0.2);
+    transform: translateY(-6px);
+  }
+  .section-pad {
+    @apply py-24 md:py-32;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 md:px-8;
+  }
+}
