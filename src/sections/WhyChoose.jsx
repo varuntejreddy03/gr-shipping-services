@@ -12,7 +12,7 @@ const USPS = [
 
 export default function WhyChoose() {
   return (
-    <section className="section-pad bg-navy">
+    <section className="section-pad bg-white">
       <div className="container-max grid lg:grid-cols-5 gap-12 items-center">
         <FadeUp className="lg:col-span-2">
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
@@ -22,16 +22,16 @@ export default function WhyChoose() {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/60 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 bg-navy-dark/80 backdrop-blur rounded-xl p-4 border border-cyan/20">
+            <div className="absolute bottom-6 left-6 right-6 bg-slate-50/80 backdrop-blur rounded-xl p-4 border border-slate-200">
               <div className="font-display text-3xl text-cyan">18+</div>
-              <div className="font-heading text-white text-sm tracking-wide">YEARS OF MARITIME EXCELLENCE</div>
+              <div className="font-heading text-slate-900 text-sm tracking-wide">YEARS OF MARITIME EXCELLENCE</div>
             </div>
           </div>
         </FadeUp>
 
         <FadeUp delay={150} className="lg:col-span-3">
           <span className="font-mono text-xs text-cyan tracking-widest uppercase">Why Choose Us</span>
-          <h2 className="font-display text-5xl md:text-6xl text-white mt-2 mb-8">
+          <h2 className="font-display text-5xl md:text-6xl text-slate-900 mt-2 mb-8">
             THE GR SHIPPING<br />
             <span className="text-gradient">ADVANTAGE</span>
           </h2>
@@ -40,16 +40,16 @@ export default function WhyChoose() {
             {USPS.map((usp, i) => (
               <div key={i} className="flex items-start gap-3">
                 <CheckCircle size={20} className="text-cyan shrink-0 mt-0.5" />
-                <span className="font-body text-white/80">{usp}</span>
+                <span className="font-body text-slate-600">{usp}</span>
               </div>
             ))}
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4">
             {['info@grshipping.com', 'grshipping@hotmail.com'].map(email => (
-              <a key={email} href={`mailto:${email}`} className="flex items-center gap-3 bg-navy-mid border border-cyan/20 rounded-xl px-4 py-3 hover:border-cyan/50 transition-colors">
+              <a key={email} href={`mailto:${email}`} className="flex items-center gap-3 bg-white-mid border border-slate-200 rounded-xl px-4 py-3 hover:border-slate-200 transition-colors">
                 <Mail size={16} className="text-cyan" />
-                <span className="font-body text-white/70 text-sm">{email}</span>
+                <span className="font-body text-slate-600 text-sm">{email}</span>
               </a>
             ))}
           </div>

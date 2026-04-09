@@ -17,11 +17,11 @@ export default function ContactForm({ preService = '' }) {
   const labelClass = 'font-heading text-xs text-steel uppercase tracking-widest mb-1.5 block'
 
   return (
-    <section className="section-pad bg-navy">
+    <section className="section-pad bg-white">
       <div className="container-max">
         <FadeUp className="text-center mb-16">
           <span className="font-mono text-xs text-cyan tracking-widest uppercase">Get In Touch</span>
-          <h2 className="font-display text-5xl md:text-6xl text-white mt-2">SEND AN INQUIRY</h2>
+          <h2 className="font-display text-5xl md:text-6xl text-slate-900 mt-2">SEND AN INQUIRY</h2>
         </FadeUp>
 
         <div className="max-w-2xl mx-auto">

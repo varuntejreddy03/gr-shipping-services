@@ -162,17 +162,17 @@ export default function PortsMap() {
   const chips = ['⭐ Kakinada', 'Vizag', 'Chennai', 'Mumbai', 'Kandla', 'Kochi', 'Kolkata', 'Paradip', 'Haldia', 'Tuticorin', 'JNPT', 'Mormugao', 'Ennore', 'Gangavaram', 'Hazira', 'Krishnapatnam']
 
   return (
-    <section className="section-pad bg-navy-dark">
+    <section className="section-pad bg-slate-50">
       <div className="container-max">
         <FadeUp className="text-center mb-12">
           <span className="font-mono text-xs text-cyan tracking-widest uppercase">Coverage</span>
-          <h2 className="font-display text-5xl md:text-6xl text-white mt-2">PORTS WE SERVE ACROSS INDIA</h2>
-          <p className="font-body text-white/50 mt-3">Home Port: Kakinada ⭐ | Serving All Major Indian Ports 24×7</p>
+          <h2 className="font-display text-5xl md:text-6xl text-slate-900 mt-2">PORTS WE SERVE ACROSS INDIA</h2>
+          <p className="font-body text-slate-600 mt-3">Home Port: Kakinada ⭐ | Serving All Major Indian Ports 24×7</p>
         </FadeUp>
 
         {/* Map */}
         <FadeUp>
-          <div className="rounded-2xl overflow-hidden border border-cyan/20 shadow-2xl shadow-cyan/5" style={{ height: '600px' }}>
+          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-2xl shadow-cyan/5" style={{ height: '600px' }}>
             <div ref={mapRef} style={{ height: '100%', width: '100%' }} />
           </div>
         </FadeUp>
@@ -181,9 +181,9 @@ export default function PortsMap() {
         <FadeUp delay={100}>
           <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
             {[['18+', 'Ports Covered'], ['East Coast', '✓ Fully Served'], ['West Coast', '✓ Fully Served'], ['All Anchorages', '✓ Available']].map(([val, label]) => (
-              <div key={val} className="bg-navy border border-cyan/10 rounded-xl px-4 py-3 text-center">
+              <div key={val} className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-center">
                 <div className="font-display text-2xl text-cyan">{val}</div>
-                <div className="font-heading text-xs text-white/40 tracking-wide mt-0.5">{label}</div>
+                <div className="font-heading text-xs text-slate-600 tracking-wide mt-0.5">{label}</div>
               </div>
             ))}
           </div>
@@ -193,7 +193,7 @@ export default function PortsMap() {
         <FadeUp delay={150}>
           <div className="mt-6 flex flex-wrap gap-2">
             {chips.map(chip => (
-              <span key={chip} className={`font-heading text-xs px-3 py-1.5 rounded-full border ${chip.startsWith('⭐') ? 'bg-gold/10 border-gold/30 text-gold' : 'bg-cyan/5 border-cyan/20 text-cyan/70'}`}>
+              <span key={chip} className={`font-heading text-xs px-3 py-1.5 rounded-full border ${chip.startsWith('⭐') ? 'bg-gold/10 border-gold/30 text-gold' : 'bg-cyan/5 border-slate-200 text-cyan/70'}`}>
                 {chip}
               </span>
             ))}

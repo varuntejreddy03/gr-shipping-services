@@ -46,7 +46,7 @@ export default function Testimonials() {
                 </div>
                 <p className="font-accent italic text-steel text-base leading-relaxed flex-1">"{t.quote}"</p>
                 <div className="border-t border-gray-100 pt-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-lg">{t.flag}</div>
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-lg">{t.flag}</div>
                   <div>
                     <div className="font-heading font-bold text-navy text-sm">{t.name}</div>
                     <div className="font-body text-steel text-xs">{t.vessel} · {t.company}</div>

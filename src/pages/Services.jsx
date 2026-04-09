@@ -6,15 +6,15 @@ import FadeUp from '../components/FadeUp'
 export default function Services() {
   return (
     <main className="pt-20">
-      <section className="relative py-32 bg-navy overflow-hidden">
+      <section className="relative py-32 bg-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-64 h-64 border border-cyan rounded-full" />
         </div>
         <div className="container-max relative text-center">
           <FadeUp>
             <span className="font-mono text-xs text-cyan tracking-widest uppercase">What We Offer</span>
-            <h1 className="font-display text-6xl md:text-8xl text-white mt-3">OUR SERVICES</h1>
-            <p className="font-body text-white/50 text-xl mt-6 max-w-2xl mx-auto">
+            <h1 className="font-display text-6xl md:text-8xl text-slate-900 mt-3">OUR SERVICES</h1>
+            <p className="font-body text-slate-600 text-xl mt-6 max-w-2xl mx-auto">
               12 core service categories covering everything your vessel needs at any Indian port.
             </p>
           </FadeUp>
@@ -31,10 +31,10 @@ export default function Services() {
                 <p className="font-body text-steel text-sm flex-1">{s.desc}</p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {s.items.slice(0, 3).map(item => (
-                    <span key={item} className="font-mono text-xs text-cyan bg-cyan/5 border border-cyan/20 px-2 py-1 rounded-full">{item}</span>
+                    <span key={item} className="font-mono text-xs text-cyan bg-cyan/5 border border-slate-200 px-2 py-1 rounded-full">{item}</span>
                   ))}
                   {s.items.length > 3 && (
-                    <span className="font-mono text-xs text-white/40 bg-white/5 border border-white/10 px-2 py-1 rounded-full">+{s.items.length - 3} more</span>
+                    <span className="font-mono text-xs text-slate-600 bg-white shadow-sm border border-slate-200 px-2 py-1 rounded-full">+{s.items.length - 3} more</span>
                   )}
                 </div>
                 <span className="flex items-center gap-1 text-cyan text-sm font-heading font-semibold group-hover:gap-2 transition-all mt-2">

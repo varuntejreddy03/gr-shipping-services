@@ -10,15 +10,15 @@ export default function Ports() {
 
   return (
     <main className="pt-20">
-      <section className="relative py-32 bg-navy overflow-hidden">
+      <section className="relative py-32 bg-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-64 h-64 border border-cyan rounded-full" />
         </div>
         <div className="container-max relative text-center">
           <FadeUp>
             <span className="font-mono text-xs text-cyan tracking-widest uppercase">Coverage</span>
-            <h1 className="font-display text-6xl md:text-8xl text-white mt-3">PORTS WE SERVE</h1>
-            <p className="font-body text-white/50 text-xl mt-6 max-w-2xl mx-auto">
+            <h1 className="font-display text-6xl md:text-8xl text-slate-900 mt-3">PORTS WE SERVE</h1>
+            <p className="font-body text-slate-600 text-xl mt-6 max-w-2xl mx-auto">
               24×7 operations across all major Indian ports. Home port: Kakinada ⭐
             </p>
           </FadeUp>
@@ -30,16 +30,16 @@ export default function Ports() {
         <div className="container-max">
           {/* Featured Home Port */}
           <FadeUp>
-            <div className="bg-navy rounded-2xl p-8 border border-cyan/30 mb-12 flex flex-col md:flex-row items-center gap-6">
+            <div className="bg-white rounded-2xl p-8 border border-slate-200 mb-12 flex flex-col md:flex-row items-center gap-6">
               <div className="w-20 h-20 rounded-full bg-cyan/10 border-2 border-cyan flex items-center justify-center text-3xl shrink-0">⭐</div>
               <div className="flex-1 text-center md:text-left">
                 <div className="font-mono text-xs text-cyan tracking-widest uppercase mb-1">Home Port</div>
-                <h2 className="font-display text-4xl text-white">KAKINADA, ANDHRA PRADESH</h2>
-                <p className="font-body text-white/50 mt-2">India's premier bulk cargo port on the East Coast. Our headquarters and primary operations base since 2007.</p>
+                <h2 className="font-display text-4xl text-slate-900">KAKINADA, ANDHRA PRADESH</h2>
+                <p className="font-body text-slate-600 mt-2">India's premier bulk cargo port on the East Coast. Our headquarters and primary operations base since 2007.</p>
               </div>
               <div className="flex flex-col gap-2 shrink-0">
                 <div className="flex items-center gap-2 text-cyan text-sm font-body"><Clock size={14} /> Response: &lt;30 min</div>
-                <div className="flex items-center gap-2 text-white/50 text-sm font-body"><MapPin size={14} /> Andhra Pradesh</div>
+                <div className="flex items-center gap-2 text-slate-600 text-sm font-body"><MapPin size={14} /> Andhra Pradesh</div>
               </div>
             </div>
           </FadeUp>
@@ -48,7 +48,7 @@ export default function Ports() {
             {PORTS.filter(p => !p.home).map((port, i) => (
               <FadeUp key={port.name} delay={i * 60}>
                 <div
-                  className={`bg-white rounded-2xl p-6 card-glow cursor-pointer transition-all ${active === port.name ? 'border-cyan/50 shadow-cyan/20' : ''}`}
+                  className={`bg-white rounded-2xl p-6 card-glow cursor-pointer transition-all ${active === port.name ? 'border-slate-200 shadow-cyan/20' : ''}`}
                   onClick={() => setActive(active === port.name ? null : port.name)}
                 >
                   <div className="flex items-start justify-between mb-3">

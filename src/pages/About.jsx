@@ -20,7 +20,7 @@ export default function About() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="relative py-32 bg-navy overflow-hidden">
+      <section className="relative py-32 bg-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-64 h-64 border border-cyan rounded-full" />
           <div className="absolute bottom-10 left-10 w-32 h-32 border border-cyan rounded-full" />
@@ -28,8 +28,8 @@ export default function About() {
         <div className="container-max relative text-center">
           <FadeUp>
             <span className="font-mono text-xs text-cyan tracking-widest uppercase">Our Story</span>
-            <h1 className="font-display text-6xl md:text-8xl text-white mt-3">ABOUT GR SHIPPING</h1>
-            <p className="font-body text-white/50 text-xl mt-6 max-w-2xl mx-auto">
+            <h1 className="font-display text-6xl md:text-8xl text-slate-900 mt-3">ABOUT GR SHIPPING</h1>
+            <p className="font-body text-slate-600 text-xl mt-6 max-w-2xl mx-auto">
               18+ years of maritime excellence, headquartered in Kakinada, serving every Indian port 24×7.
             </p>
           </FadeUp>
@@ -61,22 +61,22 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="section-pad bg-navy">
+      <section className="section-pad bg-white">
         <div className="container-max">
           <FadeUp className="text-center mb-16">
-            <h2 className="font-display text-5xl text-white">OUR JOURNEY</h2>
+            <h2 className="font-display text-5xl text-slate-900">OUR JOURNEY</h2>
           </FadeUp>
           <div className="relative max-w-2xl mx-auto">
             <div className="absolute left-6 top-0 bottom-0 w-px bg-cyan/20" />
             {TIMELINE.map((t, i) => (
               <FadeUp key={i} delay={i * 100}>
                 <div className="flex gap-6 mb-8 relative">
-                  <div className="w-12 h-12 rounded-full bg-cyan/10 border border-cyan/30 flex items-center justify-center shrink-0 z-10">
+                  <div className="w-12 h-12 rounded-full bg-cyan/10 border border-slate-200 flex items-center justify-center shrink-0 z-10">
                     <span className="font-mono text-cyan text-xs font-bold">{t.year.slice(2)}</span>
                   </div>
-                  <div className="bg-navy-mid border border-cyan/10 rounded-xl p-4 flex-1">
+                  <div className="bg-white-mid border border-slate-200 rounded-xl p-4 flex-1">
                     <span className="font-mono text-cyan text-xs">{t.year}</span>
-                    <p className="font-body text-white/70 text-sm mt-1">{t.event}</p>
+                    <p className="font-body text-slate-600 text-sm mt-1">{t.event}</p>
                   </div>
                 </div>
               </FadeUp>
@@ -106,22 +106,22 @@ export default function About() {
       </section>
 
       {/* ISO */}
-      <section className="py-20 bg-navy">
+      <section className="py-20 bg-white">
         <div className="container-max">
           <FadeUp>
-            <div className="bg-navy-mid border border-gold/20 rounded-2xl p-10 flex flex-col md:flex-row items-center gap-8">
+            <div className="bg-white-mid border border-gold/20 rounded-2xl p-10 flex flex-col md:flex-row items-center gap-8">
               <div className="w-24 h-24 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center shrink-0">
                 <span className="font-display text-gold text-2xl">ISO</span>
               </div>
               <div>
-                <h3 className="font-display text-3xl text-white mb-2">ISO 9001:2015 CERTIFIED</h3>
-                <p className="font-body text-white/60 leading-relaxed">
+                <h3 className="font-display text-3xl text-slate-900 mb-2">ISO 9001:2015 CERTIFIED</h3>
+                <p className="font-body text-slate-600 leading-relaxed">
                   Our ISO 9001:2015 certification demonstrates our commitment to quality management. Every process — from order receipt to delivery — follows documented procedures ensuring consistent, high-quality service delivery across all Indian ports.
                 </p>
               </div>
               <div className="flex flex-col gap-2 shrink-0">
                 {['Quality Processes', 'Documented Procedures', 'Continuous Improvement', 'Customer Focus'].map(item => (
-                  <div key={item} className="flex items-center gap-2 text-white/60 text-sm font-body">
+                  <div key={item} className="flex items-center gap-2 text-slate-600 text-sm font-body">
                     <CheckCircle size={14} className="text-gold" /> {item}
                   </div>
                 ))}

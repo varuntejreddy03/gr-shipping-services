@@ -14,7 +14,7 @@ export default function ServiceDetail() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="relative py-32 bg-navy overflow-hidden">
+      <section className="relative py-32 bg-white overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 right-10 w-64 h-64 border border-cyan rounded-full" />
         </div>
@@ -25,9 +25,9 @@ export default function ServiceDetail() {
             </Link>
             <div className="flex items-center gap-4 mb-4">
               <span className="text-5xl">{service.icon}</span>
-              <span className="font-mono text-xs text-cyan tracking-widest uppercase bg-cyan/10 border border-cyan/20 px-3 py-1.5 rounded-full">Service</span>
+              <span className="font-mono text-xs text-cyan tracking-widest uppercase bg-cyan/10 border border-slate-200 px-3 py-1.5 rounded-full">Service</span>
             </div>
-            <h1 className="font-display text-6xl md:text-8xl text-white">{service.name.toUpperCase()}</h1>
+            <h1 className="font-display text-6xl md:text-8xl text-slate-900">{service.name.toUpperCase()}</h1>
           </FadeUp>
         </div>
       </section>
@@ -61,13 +61,13 @@ export default function ServiceDetail() {
           {/* Sidebar */}
           <div className="flex flex-col gap-6">
             <FadeUp delay={150}>
-              <div className="bg-navy rounded-2xl p-6 border border-cyan/20">
-                <h3 className="font-heading font-bold text-white text-lg mb-4">Request This Service</h3>
-                <p className="font-body text-white/50 text-sm mb-4">Get a quote for {service.name} at your port of call.</p>
+              <div className="bg-white rounded-2xl p-6 border border-slate-200">
+                <h3 className="font-heading font-bold text-slate-900 text-lg mb-4">Request This Service</h3>
+                <p className="font-body text-slate-600 text-sm mb-4">Get a quote for {service.name} at your port of call.</p>
                 <Link to="/contact" className="block w-full bg-cyan text-navy font-heading font-bold text-center py-3 rounded-lg hover:bg-cyan-light transition-colors">
                   Get a Quote
                 </Link>
-                <a href="tel:+919652222993" className="block w-full border border-white/20 text-white font-heading font-semibold text-center py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors mt-3 text-sm">
+                <a href="tel:+919652222993" className="block w-full border border-slate-200 text-slate-900 font-heading font-semibold text-center py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors mt-3 text-sm">
                   📞 +91 96522 22993
                 </a>
               </div>

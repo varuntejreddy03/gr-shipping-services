@@ -15,15 +15,15 @@ export default function Contact() {
 
   return (
     <main className="pt-20">
-      <section className="relative py-32 bg-navy overflow-hidden">
+      <section className="relative py-32 bg-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-64 h-64 border border-cyan rounded-full" />
         </div>
         <div className="container-max relative text-center">
           <FadeUp>
             <span className="font-mono text-xs text-cyan tracking-widest uppercase">Reach Us</span>
-            <h1 className="font-display text-6xl md:text-8xl text-white mt-3">CONTACT US</h1>
-            <p className="font-body text-white/50 text-xl mt-6">Available 24×7, 365 days. We respond in under 30 minutes.</p>
+            <h1 className="font-display text-6xl md:text-8xl text-slate-900 mt-3">CONTACT US</h1>
+            <p className="font-body text-slate-600 text-xl mt-6">Available 24×7, 365 days. We respond in under 30 minutes.</p>
           </FadeUp>
         </div>
       </section>
@@ -31,8 +31,8 @@ export default function Contact() {
       {/* Emergency Banner */}
       <div className="bg-danger py-4">
         <div className="container-max flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-          <span className="font-heading font-bold text-white text-lg">🚨 URGENT? CALL NOW:</span>
-          <a href="tel:+919652222993" className="font-display text-white text-2xl hover:text-white/80 transition-colors">+91 96522 22993</a>
+          <span className="font-heading font-bold text-slate-900 text-lg">🚨 URGENT? CALL NOW:</span>
+          <a href="tel:+919652222993" className="font-display text-slate-900 text-2xl hover:text-slate-600 transition-colors">+91 96522 22993</a>
         </div>
       </div>
 
@@ -105,14 +105,14 @@ export default function Contact() {
                 { icon: <Phone size={20} />, label: 'Phone (24×7)', value: '+91 96522 22993', href: 'tel:+919652222993', color: 'text-cyan' },
                 { icon: <Mail size={20} />, label: 'Email', value: 'info@grshipping.com', href: 'mailto:info@grshipping.com', color: 'text-cyan' },
                 { icon: <Mail size={20} />, label: 'Email (Alt)', value: 'grshipping@hotmail.com', href: 'mailto:grshipping@hotmail.com', color: 'text-cyan' },
-                { icon: <MapPin size={20} />, label: 'Home Port', value: 'Kakinada, Andhra Pradesh, India', href: null, color: 'text-white/70' },
-                { icon: <Clock size={20} />, label: 'Availability', value: '24×7, 365 Days a Year', href: null, color: 'text-white/70' },
+                { icon: <MapPin size={20} />, label: 'Home Port', value: 'Kakinada, Andhra Pradesh, India', href: null, color: 'text-slate-600' },
+                { icon: <Clock size={20} />, label: 'Availability', value: '24×7, 365 Days a Year', href: null, color: 'text-slate-600' },
                 { icon: <span className="text-base">📸</span>, label: 'Instagram', value: '@gr_shipping_services', href: 'https://instagram.com/gr_shipping_services', color: 'text-cyan' },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 bg-navy rounded-xl p-5 border border-cyan/10">
+                <div key={i} className="flex items-center gap-4 bg-white rounded-xl p-5 border border-slate-200">
                   <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan shrink-0">{item.icon}</div>
                   <div>
-                    <div className="font-heading text-xs text-white/40 uppercase tracking-widest">{item.label}</div>
+                    <div className="font-heading text-xs text-slate-600 uppercase tracking-widest">{item.label}</div>
                     {item.href ? (
                       <a href={item.href} className={`font-body font-semibold ${item.color} hover:opacity-80 transition-opacity`}>{item.value}</a>
                     ) : (

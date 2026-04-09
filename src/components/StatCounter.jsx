@@ -29,7 +29,7 @@ export default function StatCounter({ value, label }) {
   return (
     <div ref={ref} className="text-center">
       <div className="font-display text-4xl md:text-5xl text-cyan">{display}</div>
-      <div className="font-heading text-sm text-white/50 tracking-widest uppercase mt-1">{label}</div>
+      <div className="font-heading text-sm text-slate-600 tracking-widest uppercase mt-1">{label}</div>
     </div>
   )
 }

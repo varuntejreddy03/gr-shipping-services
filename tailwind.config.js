@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: '#1B2A4A',
-        'navy-dark': '#0D1B2E',
-        'navy-mid': '#152238',
-        cyan: '#00C2E0',
-        'cyan-light': '#4DD9F0',
+        navy: '#1E3A8A',
+        'navy-dark': '#0F172A',
+        'navy-mid': '#1E293B',
+        cyan: '#0284C7',
+        'cyan-light': '#38BDF8',
         steel: '#6B7A8D',
         danger: '#E84646',
         gold: '#D4A843',
@@ -18,8 +18,8 @@ export default {
         display: ['"Bebas Neue"', 'cursive'],
         heading: ['"Barlow Condensed"', 'sans-serif'],
         body: ['"DM Sans"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-        accent: ['"Fraunces"', 'serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+        accent: ['Fraunces', 'serif'],
       },
       animation: {
         pulse2: 'pulse2 2s cubic-bezier(0.4,0,0.6,1) infinite',
