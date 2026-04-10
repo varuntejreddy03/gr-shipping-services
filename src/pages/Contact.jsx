@@ -103,6 +103,31 @@ export default function Contact() {
             <div className="flex flex-col gap-6">
               {[
                 { icon: <Phone size={20} />, label: 'Phone (24×7)', value: '+91 96522 22993', href: 'tel:+919652222993', color: 'text-cyan' },
+                {
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
+                    </svg>
+                  ),
+                  label: 'WhatsApp',
+                  value: '+91 96522 22993',
+                  href: 'https://wa.me/919652222993',
+                  color: 'text-cyan',
+                  iconColor: 'text-[#25D366]'
+                },
+                {
+                  icon: (
+                    <svg viewBox="0 0 24 24" className="w-5 h-5" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10" fill="currentColor" />
+                      <path d="M14.9 7.7c-.8-.5-1.8-.8-2.9-.8-2.3 0-3.9 1.3-3.9 3.1 0 1.5 1 2.4 3 2.9l1.1.3c1 .2 1.5.6 1.5 1.2 0 .7-.7 1.2-1.8 1.2-1.2 0-2.3-.4-3.1-1.1l-1.2 1.8c1 .9 2.6 1.4 4.3 1.4 2.5 0 4.2-1.2 4.2-3.2 0-1.6-1-2.6-3.1-3.1l-1.1-.2c-.9-.2-1.4-.5-1.4-1.1 0-.7.7-1.1 1.6-1.1 1 0 1.9.3 2.6.8z" fill="#fff" />
+                    </svg>
+                  ),
+                  label: 'Skype',
+                  value: 'live:grshipping',
+                  href: 'skype:live:grshipping?chat',
+                  color: 'text-cyan',
+                  iconColor: 'text-[#00AFF0]'
+                },
                 { icon: <Mail size={20} />, label: 'Email', value: 'info@grshipping.com', href: 'mailto:info@grshipping.com', color: 'text-cyan' },
                 { icon: <Mail size={20} />, label: 'Email (Alt)', value: 'grshipping@hotmail.com', href: 'mailto:grshipping@hotmail.com', color: 'text-cyan' },
                 { icon: <MapPin size={20} />, label: 'Home Port', value: 'Kakinada, Andhra Pradesh, India', href: null, color: 'text-slate-600' },
@@ -110,7 +135,7 @@ export default function Contact() {
                 { icon: <span className="text-base">📸</span>, label: 'Instagram', value: '@gr_shipping_services', href: 'https://instagram.com/gr_shipping_services', color: 'text-cyan' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 bg-white rounded-xl p-5 border border-slate-200">
-                  <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan shrink-0">{item.icon}</div>
+                  <div className={`w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center ${item.iconColor || 'text-cyan'} shrink-0`}>{item.icon}</div>
                   <div>
                     <div className="font-heading text-xs text-slate-600 uppercase tracking-widest">{item.label}</div>
                     {item.href ? (
