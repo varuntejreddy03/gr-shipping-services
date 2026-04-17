@@ -10,6 +10,19 @@ export default function ContactForm({ preService = '' }) {
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
   const submit = e => {
     e.preventDefault()
+
+    const lines = [
+      'Hello GR Shipping Services, I want to send an inquiry.',
+      '',
+      `Name: ${form.name || 'N/A'}`,
+      `Vessel Name: ${form.vessel || 'N/A'}`,
+      `Port of Call: ${form.port || 'N/A'}`,
+      `Service Required: ${form.service || 'N/A'}`,
+      `Message: ${form.message || 'N/A'}`,
+    ]
+
+    const text = encodeURIComponent(lines.join('\n'))
+    window.open(`https://wa.me/919652222993?text=${text}`, '_blank', 'noopener,noreferrer')
     setSent(true)
   }
 

@@ -8,7 +8,25 @@ export default function Contact() {
   const [sent, setSent] = useState(false)
 
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
-  const submit = e => { e.preventDefault(); setSent(true) }
+  const submit = e => {
+    e.preventDefault()
+
+    const lines = [
+      'Hello GR Shipping Services, I want to submit an inquiry.',
+      '',
+      `Name: ${form.name || 'N/A'}`,
+      `Company / Vessel: ${form.company || 'N/A'}`,
+      `Vessel Type: ${form.vesselType || 'N/A'}`,
+      `Port of Call: ${form.port || 'N/A'}`,
+      `Service Required: ${form.service || 'N/A'}`,
+      `Urgency: ${form.urgency || 'Normal'}`,
+      `Message: ${form.message || 'N/A'}`,
+    ]
+
+    const text = encodeURIComponent(lines.join('\n'))
+    window.open(`https://wa.me/919652222993?text=${text}`, '_blank', 'noopener,noreferrer')
+    setSent(true)
+  }
 
   const inputClass = 'w-full bg-offwhite border border-gray-200 focus:border-cyan focus:outline-none rounded-lg px-4 py-3 font-body text-navy text-sm transition-colors'
   const labelClass = 'font-heading text-xs text-steel uppercase tracking-widest mb-1.5 block'
