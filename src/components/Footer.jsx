@@ -79,9 +79,24 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-slate-200 py-5">
-        <div className="container-max flex flex-col md:flex-row items-center justify-between gap-2 text-slate-600 text-xs font-body">
-          <span>© 2025 GR Shipping Services | All Rights Reserved</span>
-          <span className="font-mono text-cyan/50">ISO 9001 CERTIFIED | EST. 2007 | KAKINADA</span>
+        <div className="container-max flex flex-col items-center justify-center gap-1 text-center text-slate-600 text-xs font-body">
+          <span className="font-medium tracking-wide inline-flex items-center gap-2">
+            Built with ❤️ by
+            <a
+              href="https://staffarc.in"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-orange-600 hover:text-orange-500 transition-colors"
+            >
+              <img
+                src="https://www.staffarc.in/images/Staffarc-logo.png"
+                alt="StaffArc"
+                className="h-4 w-auto"
+              />
+              <span>StaffArc</span>
+            </a>
+          </span>
+          <span className="font-mono text-cyan/70">© 2026 GR Shipping Services. All rights reserved.</span>
         </div>
       </div>
     </footer>

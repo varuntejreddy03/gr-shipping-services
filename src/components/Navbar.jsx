@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Phone, Menu, X, ChevronDown, ArrowRight } from 'lucide-react'
+import { Phone, Mail, Menu, X, ChevronDown, ArrowRight } from 'lucide-react'
 import { SERVICES } from '../data'
 
 function WhatsAppIcon({ className = 'w-4 h-4' }) {
@@ -52,52 +52,30 @@ export default function Navbar() {
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'shadow-lg' : 'shadow-md'}`}
-        style={{ backgroundColor: '#ffffff' }}
+        className={`fixed top-0 left-0 right-0 z-[100] border-b border-slate-200/70 bg-white/90 backdrop-blur-xl transition-all duration-300 ${scrolled ? 'shadow-[0_10px_30px_rgba(15,23,42,0.08)]' : 'shadow-[0_6px_20px_rgba(15,23,42,0.06)]'}`}
       >
-        {/* Top contact strip */}
-        <div className="hidden lg:block border-b border-slate-200/80 bg-white">
-          <div className="container-max h-10 flex items-center justify-end gap-6" style={fontHeadingStyle}>
-            <a
-              href="https://wa.me/919652222993"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 text-navy hover:text-[#25D366] font-semibold text-sm transition-colors"
-            >
-              <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
-              +91 96522 22993
-            </a>
-            <a
-              href="mailto:info@grshipping.com"
-              className="text-navy hover:text-cyan font-semibold text-sm transition-colors"
-            >
-              info@grshipping.com
-            </a>
-          </div>
-        </div>
-
-        <div className="container-max flex items-center justify-between h-20">
+        <div className="container-max flex items-center justify-between h-18 py-3">
 
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0">
-            <img src="/grlogo.png" alt="GR Shipping Services" className="h-16 w-auto" />
+            <img src="/grlogo.png" alt="GR Shipping Services" className="h-11 md:h-12 w-auto" />
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-1" style={fontHeadingStyle}>
+          <div className="hidden lg:flex items-center gap-2" style={fontHeadingStyle}>
             <NavLink to="/" className={navLinkClass} end>
-              <span className="px-4 py-2 rounded-lg hover:bg-white shadow-sm border border-slate-200 block transition-colors">Home</span>
+              <span className="px-4 py-2 rounded-full border border-slate-200/80 bg-slate-50/70 shadow-sm block transition-all hover:bg-white hover:border-cyan/30 hover:text-cyan">Home</span>
             </NavLink>
             <NavLink to="/about" className={navLinkClass}>
-              <span className="px-4 py-2 rounded-lg hover:bg-white shadow-sm border border-slate-200 block transition-colors">About</span>
+              <span className="px-4 py-2 rounded-full border border-slate-200/80 bg-slate-50/70 shadow-sm block transition-all hover:bg-white hover:border-cyan/30 hover:text-cyan">About</span>
             </NavLink>
 
             {/* Services Mega Menu Trigger */}
             <div ref={dropdownRef} className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-lg font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-200 hover:bg-white shadow-sm border border-slate-200 ${
-                  servicesOpen ? 'text-cyan bg-white shadow-sm border border-slate-200' : 'text-navy hover:text-cyan'
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-200 shadow-sm border ${
+                  servicesOpen ? 'text-cyan bg-white border-cyan/30' : 'text-navy bg-slate-50/70 border-slate-200/80 hover:bg-white hover:border-cyan/30 hover:text-cyan'
                 }`}
               >
                 Services
@@ -152,29 +130,31 @@ export default function Navbar() {
             </div>
 
             <NavLink to="/ports" className={navLinkClass}>
-              <span className="px-4 py-2 rounded-lg hover:bg-white shadow-sm border border-slate-200 block transition-colors">Ports</span>
+              <span className="px-4 py-2 rounded-full border border-slate-200/80 bg-slate-50/70 shadow-sm block transition-all hover:bg-white hover:border-cyan/30 hover:text-cyan">Ports</span>
             </NavLink>
             <NavLink to="/contact" className={navLinkClass}>
-              <span className="px-4 py-2 rounded-lg hover:bg-white shadow-sm border border-slate-200 block transition-colors">Contact</span>
+              <span className="px-4 py-2 rounded-full border border-slate-200/80 bg-slate-50/70 shadow-sm block transition-all hover:bg-white hover:border-cyan/30 hover:text-cyan">Contact</span>
             </NavLink>
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+919652222993" className="flex items-center gap-2 text-navy hover:text-cyan font-heading font-semibold text-sm transition-colors" style={fontHeadingStyle}>
-              <Phone size={15} className="text-cyan" /> +91 96522 22993
+          <div className="hidden lg:flex items-center gap-2">
+            <a href="https://wa.me/919652222993" target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50/70 px-3.5 py-2 text-navy font-heading font-semibold text-sm transition-all hover:bg-white hover:border-cyan/30 hover:text-cyan" style={fontHeadingStyle}>
+              <WhatsAppIcon className="w-4 h-4 text-[#25D366]" /> +91 96522 22993
             </a>
-            <Link
-              to="/contact"
-              className="bg-cyan text-navy font-heading font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-cyan-light transition-all hover:shadow-lg hover:shadow-cyan/25"
-              style={fontHeadingStyle}
-            >
-              Get a Quote
-            </Link>
+            <a href="mailto:info@grshipping.com" className="flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/5 px-3.5 py-2 text-navy font-heading font-semibold text-sm transition-all hover:bg-cyan/10 hover:border-cyan/30 hover:text-cyan" style={fontHeadingStyle}>
+              <Mail size={15} className="text-cyan" /> info@grshipping.com
+            </a>
+            <div className="relative w-14 h-8 overflow-hidden pointer-events-none opacity-70" aria-hidden="true">
+              <svg viewBox="0 0 64 32" className="w-full h-full">
+                <circle cx="50" cy="16" r="12" fill="none" className="stroke-slate-300/80" strokeWidth="1.25" />
+                <circle cx="50" cy="16" r="22" fill="none" className="stroke-slate-300/80" strokeWidth="1.25" />
+              </svg>
+            </div>
           </div>
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-white shadow-sm border border-slate-200 border border-navy/10 text-navy hover:bg-white shadow-sm border border-slate-200 transition-colors"
+            className="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 shadow-sm border border-slate-200/80 text-navy hover:bg-white hover:border-cyan/30 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -188,7 +168,7 @@ export default function Navbar() {
         <div className="absolute inset-0 bg-white shadow-sm border border-slate-200 backdrop-blur-xl" onClick={() => setMenuOpen(false)} />
 
         {/* Panel */}
-        <div className={`absolute top-20 left-0 right-0 bottom-0 overflow-y-auto transition-transform duration-300 ${menuOpen ? 'translate-y-0' : '-translate-y-4'}`}>
+        <div className={`absolute top-16 left-0 right-0 bottom-0 overflow-y-auto transition-transform duration-300 ${menuOpen ? 'translate-y-0' : '-translate-y-4'}`}>
           <div className="px-4 py-6 flex flex-col gap-1">
 
             {[['/', 'Home', true], ['/about', 'About', false], ['/ports', 'Ports', false], ['/contact', 'Contact', false]].map(([path, label, end]) => (
@@ -242,9 +222,6 @@ export default function Navbar() {
               <a href="tel:+919652222993" className="flex items-center justify-center gap-2 bg-white shadow-sm border border-slate-200 border border-navy/10 text-cyan font-heading font-bold py-3.5 rounded-xl">
                 <Phone size={16} /> +91 96522 22993
               </a>
-              <Link to="/contact" className="bg-cyan text-navy font-heading font-bold text-center py-3.5 rounded-xl hover:bg-cyan-light transition-colors">
-                Get a Quote
-              </Link>
             </div>
           </div>
         </div>

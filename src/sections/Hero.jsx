@@ -3,28 +3,28 @@ import { Phone, ChevronDown, Anchor, Shield, Clock } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-[calc(100svh-64px)] md:min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=80)' }}
+        style={{
+          backgroundImage: "url('/heroimagee.jpeg')",
+          backgroundPosition: '66% center'
+        }}
       />
-      {/* Gradient overlay — darker for readability over image */}
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(13,27,46,0.85) 0%, rgba(13,27,46,0.6) 50%, rgba(13,27,46,0.95) 100%)' }} />
+      {/* Gradient overlay tuned lighter while keeping text readable */}
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(13,27,46,0.68) 0%, rgba(13,27,46,0.45) 52%, rgba(13,27,46,0.78) 100%)' }} />
+      <div className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(180deg, rgba(13,27,46,0.34) 0%, rgba(13,27,46,0.18) 35%, rgba(13,27,46,0.74) 100%)' }} />
 
       {/* Animated cyan grid lines — desktop only */}
       <div className="absolute inset-0 opacity-[0.03] hidden md:block"
         style={{ backgroundImage: 'linear-gradient(#00C2E0 1px, transparent 1px), linear-gradient(90deg, #00C2E0 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-      {/* Decorative circles */}
-      <div className="absolute top-1/4 right-0 w-72 h-72 md:w-96 md:h-96 rounded-full border border-slate-200 -translate-y-1/2 translate-x-1/3" />
-      <div className="absolute top-1/4 right-0 w-48 h-48 md:w-64 md:h-64 rounded-full border border-slate-200 -translate-y-1/2 translate-x-1/3" />
-
-        <div className="relative container-max pt-28 pb-16 md:pt-36 md:pb-24 flex flex-col">
+        <div className="relative container-max px-3 sm:px-4 md:px-0 pt-20 pb-12 md:pt-36 md:pb-24 flex flex-col">
 
           {/* Headline — tighter on mobile */}
         <h1 
-          className="font-display text-[52px] leading-[0.95] md:text-8xl lg:text-9xl text-white mb-5 md:mb-6 max-w-5xl"
+          className="font-display text-[40px] sm:text-[48px] leading-[0.92] md:text-8xl lg:text-9xl text-white mb-4 md:mb-6 max-w-[14rem] sm:max-w-xl md:max-w-5xl"
           style={{ fontFamily: '"Bebas Neue", cursive' }}
         >
           YOUR TRUSTED{' '}
@@ -34,25 +34,28 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p 
-          className="font-body text-sm md:text-xl text-white/80 max-w-2xl mb-8 md:mb-10 leading-relaxed"
+          className="font-body text-[13px] sm:text-sm md:text-xl text-white/85 max-w-[18rem] sm:max-w-xl md:max-w-2xl mb-6 md:mb-10 leading-relaxed"
           style={{ fontFamily: '"DM Sans", sans-serif' }}
         >
           Ship Chandler • Provisions • Stores • Repairs • Underwater Services —{' '}
-          <span className="text-cyan font-semibold">24×7</span> from Kakinada to Every Indian Port
+          <span className="inline-flex items-center rounded-full border border-white/40 bg-white/10 px-2 py-0.5 text-white font-heading font-bold tracking-wide align-middle">
+            24×7
+          </span>{' '}
+          across all Indian ports
         </p>
 
         {/* CTAs — full width on mobile */}
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-12 w-full sm:w-auto max-w-xl">
           <Link
             to="/contact"
-            className="bg-cyan text-navy font-heading font-bold text-sm md:text-base px-6 md:px-8 py-4 rounded-xl hover:bg-cyan-light transition-all hover:shadow-lg hover:shadow-cyan/30 text-center"
+            className="w-full sm:w-auto bg-cyan text-navy font-heading font-bold text-sm md:text-base px-6 md:px-8 py-3.5 rounded-xl hover:bg-cyan-light transition-all hover:shadow-lg hover:shadow-cyan/30 text-center"
             style={{ fontFamily: '"Barlow Condensed", sans-serif' }}
           >
             Request a Supply Quote
           </Link>
           <Link
             to="/services"
-            className="border-2 border-white/20 text-white font-heading font-bold text-sm md:text-base px-6 md:px-8 py-4 rounded-xl hover:border-cyan hover:bg-cyan/10 hover:text-cyan transition-all text-center"
+            className="w-full sm:w-auto border-2 border-white/20 text-white font-heading font-bold text-sm md:text-base px-6 md:px-8 py-3.5 rounded-xl hover:border-cyan hover:bg-cyan/10 hover:text-cyan transition-all text-center"
             style={{ fontFamily: '"Barlow Condensed", sans-serif' }}
           >
             Explore Our Services
@@ -60,21 +63,21 @@ export default function Hero() {
         </div>
 
         {/* Mobile trust pills */}
-        <div className="flex flex-wrap gap-2 mb-8 md:hidden">
+        <div className="flex flex-wrap gap-2 mb-6 md:hidden max-w-xl">
           {[
             { icon: <Shield size={11} />, label: 'ISO 9001 Certified' },
             { icon: <Clock size={11} />, label: '24×7 Available' },
             { icon: <Anchor size={11} />, label: 'All Indian Ports' },
           ].map(({ icon, label }) => (
-            <div key={label} className="flex items-center gap-1.5 bg-white shadow-sm border border-slate-200 rounded-full px-3 py-1.5">
+            <div key={label} className="flex items-center gap-1.5 bg-white/95 shadow-sm border border-slate-200 rounded-full px-3 py-1.5">
               <span className="text-cyan">{icon}</span>
-              <span className="font-heading text-[11px] text-slate-600 font-semibold tracking-wide">{label}</span>
+              <span className="font-heading text-[10px] text-slate-600 font-semibold tracking-wide">{label}</span>
             </div>
           ))}
         </div>
 
         {/* Available now card */}
-        <div className="inline-flex self-start items-center gap-3 bg-navy-light/40 backdrop-blur border border-white/10 rounded-xl px-4 py-3">
+        <div className="inline-flex self-start max-w-full items-center gap-3 bg-navy-light/40 backdrop-blur border border-white/10 rounded-xl px-4 py-3 mb-1">
           <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shrink-0" />
           <span className="font-heading font-semibold text-white/90 text-xs md:text-sm">Available Now —</span>
           <a href="tel:+919652222993" className="text-cyan font-heading font-bold text-xs md:text-sm flex items-center gap-1.5">
@@ -83,7 +86,7 @@ export default function Hero() {
         </div>
 
         {/* Mobile bottom stats strip */}
-        <div className="grid grid-cols-3 gap-2 mt-8 md:hidden">
+        <div className="grid grid-cols-3 gap-2 mt-6 md:hidden max-w-xl">
           {[['500+', 'Vessels'], ['18+', 'Years'], ['13+', 'Ports']].map(([val, label]) => (
             <div key={label} className="bg-white shadow-sm border border-slate-200 rounded-xl py-3 text-center">
               <div className="font-display text-2xl text-cyan leading-none">{val}</div>
